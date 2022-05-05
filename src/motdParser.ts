@@ -90,10 +90,11 @@ function parseTextToJSON(motdString: string) {
             colorHex = colorCodeToHex[stringToLowerCase]
         } else if (textToJsonExtras.hasOwnProperty(stringToLowerCase)) {
             fontStyle = textToJsonExtras[stringToLowerCase]
-        }else {
+        } else {
+            let text = item
             if (stringToLowerCase == "§x"){
-                const hexColourCode = "#" + codeSplit[index+2] + codeSplit[index+4] + codeSplit[index+6] + codeSplit[index+8] + codeSplit[index+10] + codeSplit[index+12]
-                colorHex = hexColourCode.replaceAll('§', '')
+                colorHex = ("#" + codeSplit[index+2] + codeSplit[index+4] + codeSplit[index+6] + codeSplit[index+8] + codeSplit[index+10] + codeSplit[index+12]).replaceAll('§', '')
+                text = codeSplit[index+13]
                 skipNext = 13
             }
 
@@ -105,7 +106,7 @@ function parseTextToJSON(motdString: string) {
             if (fontStyle !== '') {
                 innerObject[fontStyle] = true
             }
-            innerObject.text = item
+            innerObject.text = text
 
             if (colorHex !== '') {
                 innerObject.color = colorHex
