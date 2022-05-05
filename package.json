@@ -1,5 +1,5 @@
 {
-  "name": "@sfirew/mc-motd-parser",
+  "name": "@silentbot1/mc-motd-parser",
   "description": "Minecraft Server MOTD Parser, can convert to html, json, text.",
   "version": "1.0.8",
   "main": "./dist/index.js",
@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^16.6.0",
+    "ts-node": "^10.7.0",
     "typescript": "^4.3.5"
   },
   "scripts": {
@@ -14,8 +15,8 @@
     "build": "tsc --project ./",
     "declaration": "tsc --project ./ --declaration"
   },
-  "repository": "https://github.com/SnowFireWolf/minecraft-motd-parser.git",
-  "author": "SnowFireWolf",
+  "repository": "https://github.com/SilentBot1/minecraft-motd-parser.git",
+  "author": "SilentBot1",
   "keywords": [
     "motd",
     "color",
@@ -27,6 +28,6 @@
     "typescript"
   ],
   "publishConfig": {
-    "@snowfirewolf:registry": "https://npm.pkg.github.com"
+    "@SilentBot1:registry": "https://npm.pkg.github.com"
   }
 }
