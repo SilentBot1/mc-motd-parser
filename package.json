@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "ts-node ./src/test.ts",
-    "build": "tsc --project ./",
+    "build": "tsc --project ./ && tsc --project ./ --declaration",
     "declaration": "tsc --project ./ --declaration"
   },
   "repository": "https://github.com/SilentBot1/minecraft-motd-parser.git",
